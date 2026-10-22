@@ -1,48 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 15px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #0366d6;
-            font-size: 1.1em;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cumulo – Your files, everywhere</title>
+<meta name="description" content="Cumulo keeps your files in sync, secure and easy to share across every device. Start with 15 GB free.">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27&gt;&lt;text y=%27.9em%27 font-size=%2790%27&gt;☁️&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f6; --panel:#ffffff; --ink:#1b2333; --muted:#5d687d; --line:#dde2ec;
+  --accent:#2f4bff; --accent-ink:#ffffff; --accent-soft:#e6eaff;
+  --c-doc:#3b82f6; --c-img:#10a37f; --c-vid:#e0566b; --c-zip:#b7791f;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142;
+    --accent:#7d8dff; --accent-ink:#10141d; --accent-soft:#242b4a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142;
+  --accent:#7d8dff; --accent-ink:#10141d; --accent-soft:#242b4a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;letter-spacing:-.02em;text-decoration:none}
+.brand svg{width:30px;height:30px}
+.top nav{display:flex;align-items:center;gap:6px}
+.top nav a{text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:500;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.primary:hover{filter:brightness(1.08)}
+.top nav a.btn.primary{color:var(--accent-ink);padding:9px 18px}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 80px}
+h1{font-size:clamp(40px,6vw,66px);line-height:1.03;letter-spacing:-.035em;margin:0 0 20px;font-weight:800}
+.lead{font-size:19px;color:var(--muted);max-width:46ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.fine{color:var(--muted);font-size:14px;margin-top:14px}
+
+/* product peek */
+.peek{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 20px 50px -24px rgba(20,30,70,.35)}
+.peek-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:700}
+.sync{font-size:13px;font-weight:500;color:var(--c-img);display:flex;align-items:center;gap:6px}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--c-img);animation:pulse 2.4s ease-out 1}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,163,127,.6)}100%{box-shadow:0 0 0 10px rgba(16,163,127,0)}}
+.row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.ico{width:40px;height:40px;border-radius:10px;color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+.row b{display:block;font-weight:500;line-height:1.25}
+.row small{color:var(--muted)}
+.row .tag{margin-left:auto;font-size:12px;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:99px;white-space:nowrap}
+.meter{margin-top:6px;border-top:1px solid var(--line);padding-top:14px;font-size:14px;color:var(--muted)}
+.meter div{height:8px;border-radius:99px;background:var(--bg);margin-top:8px;display:flex;overflow:hidden}
+.meter i{display:block}
+
+.features{padding:24px 0 80px}
+h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.03em;line-height:1.1;margin:0 0 40px;max-width:18ch}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);column-gap:56px}
+.f{padding:26px 0;border-top:1px solid var(--line)}
+.f h3{margin:0 0 6px;font-size:21px;letter-spacing:-.015em}
+.f p{margin:0;color:var(--muted);max-width:44ch}
+
+.band{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.band .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.stat{min-width:140px}
+.stat b{display:block;font-size:34px;letter-spacing:-.03em;line-height:1.1}
+.stat span{color:var(--muted);font-size:15px}
+
+.final{text-align:center;padding:90px 0}
+.final h2{margin:0 auto 12px;max-width:20ch}
+.final p{color:var(--muted);margin:0 0 28px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{margin-left:18px;text-decoration:none}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding:32px 0 56px;gap:36px}
+  .grid{grid-template-columns:1fr}
+  .top nav a:not(.btn){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sync i{animation:none}}
+</style>
 </head>
 <body>
-    <h1>GitHub Pages</h1>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M10 21a4 4 0 0 1 .6-7.95A6 6 0 0 1 22 14.5 3.3 3.3 0 0 1 21.5 21z" fill="var(--accent-ink)"/></svg>
+      Cumulo
+    </a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#security">Security</a>
+      <a href="app.html">Log in</a>
+      <a class="btn primary" href="app.html">Sign up free</a>
+    </nav>
+  </header>
 
-    <p>Select a page:</p>
+  <section class="hero">
+    <div>
+      <h1>Every file, on every device, the moment you need it.</h1>
+      <p class="lead">Cumulo keeps your documents, photos and projects in one secure place, so you can pick up where you left off from your laptop, phone or a colleague’s desk.</p>
+      <div class="cta">
+        <a class="btn primary" href="app.html">Start with 15 GB free</a>
+        <a class="btn" href="#features">See what’s inside</a>
+      </div>
+      <p class="fine">No credit card required.</p>
+    </div>
 
-    <ul>
-        <li><a href="README.md">README</a></li>
-        <li><a href="homes.html">Homes</a></li>
-        <li><a href="priv.html">Private</a></li>
-        <li><a href="toc.html">Table of Contents</a></li>
-    </ul>
+    <div class="peek" aria-label="Example of the Cumulo file view">
+      <div class="peek-h">Recent <span class="sync"><i></i>All devices synced</span></div>
+      <div class="row"><span class="ico" style="background:var(--c-doc)">DOC</span><span><b>Site survey – north yard.pdf</b><small>Edited 3 minutes ago</small></span><span class="tag">Shared</span></div>
+      <div class="row"><span class="ico" style="background:var(--c-img)">IMG</span><span><b>Lab bench setup.png</b><small>Added from your phone</small></span></div>
+      <div class="row"><span class="ico" style="background:var(--c-vid)">VID</span><span><b>Design review.mp4</b><small>Available offline</small></span></div>
+      <div class="meter">4.8 GB of 15 GB used
+        <div><i style="width:14%;background:var(--c-doc)"></i><i style="width:10%;background:var(--c-img)"></i><i style="width:8%;background:var(--c-vid)"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Everything you need to store and share work</h2>
+    <div class="grid">
+      <div class="f"><h3>Automatic sync</h3><p>Save a file once and it appears on all your devices within seconds. Edit on one, continue on another.</p></div>
+      <div class="f"><h3>Share with a link</h3><p>Send a link instead of an attachment. Add a password, set an expiry date, or limit people to view only.</p></div>
+      <div class="f"><h3>Version history</h3><p>Restore any file to how it looked in the last 30 days, and recover anything you delete by mistake.</p></div>
+      <div class="f"><h3>Offline access</h3><p>Mark folders as available offline and keep working on a plane, on site or anywhere signal drops.</p></div>
+      <div class="f"><h3>Search that reads inside files</h3><p>Find a document by a phrase in its text, a name in a photo caption or a value in a spreadsheet.</p></div>
+      <div class="f"><h3>Team folders</h3><p>Give a team one shared space with roles for owners, editors and viewers, and see who changed what.</p></div>
+    </div>
+  </section>
+</div>
+
+<section class="band" id="security">
+  <div class="wrap">
+    <div class="stat"><b>End-to-end</b><span>encryption for every file</span></div>
+    <div class="stat"><b>2-step</b><span>sign-in with passkeys</span></div>
+    <div class="stat"><b>30 days</b><span>of version history</span></div>
+    <div class="stat"><b>99.99%</b><span>uptime target</span></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="final" id="signup">
+    <h2>Make your first folder in under a minute.</h2>
+    <p>Create a free account and get 15 GB to start.</p>
+    <div class="cta" style="justify-content:center">
+      <a class="btn primary" href="app.html">Create free account</a>
+      <a class="btn" href="app.html">Log in</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Cumulo</span>
+    <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:hello@cumulo.example">Contact</a></span>
+  </div>
+</footer>
 </body>
 </html>
