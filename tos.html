@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Service – Cumulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f6; --panel:#ffffff; --ink:#1b2333; --muted:#5d687d; --line:#dde2ec;
+  --accent:#2f4bff; --accent-ink:#ffffff; --accent-soft:#e6eaff;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142;
+    --accent:#7d8dff; --accent-ink:#10141d; --accent-soft:#242b4a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142;
+  --accent:#7d8dff; --accent-ink:#10141d; --accent-soft:#242b4a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(24px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+.brand svg{width:30px;height:30px}
+.back{color:var(--muted);text-decoration:none;font-weight:500}
+.back:hover{color:var(--ink)}
+
+h1{font-size:clamp(34px,5vw,50px);letter-spacing:-.03em;line-height:1.08;margin:28px 0 8px;font-weight:800}
+.updated{color:var(--muted);margin:0 0 36px}
+
+.layout{display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:start;padding-bottom:80px}
+.toc{position:sticky;top:calc(24px + env(safe-area-inset-top,0px));font-size:15px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc a{display:block;padding:6px 0 6px 16px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--accent);border-left-color:var(--accent);font-weight:500}
+
+article{max-width:68ch}
+.summary{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:12px}
+.summary b{display:block;margin-bottom:6px}
+.summary ul{margin:0;padding-left:20px}
+section{padding-top:32px}
+h2{font-size:26px;letter-spacing:-.02em;line-height:1.2;margin:0 0 10px}
+p{margin:0 0 14px}
+ul.pl{padding-left:20px;margin:0 0 14px}
+ul.pl li{margin-bottom:6px}
+.caps{font-size:15px;text-transform:uppercase;letter-spacing:.01em}
+.tbl{overflow-x:auto;margin:10px 0 16px}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;background:var(--panel)}
+.note{margin-top:48px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+
+@media (max-width:820px){
+  .layout{grid-template-columns:1fr;gap:8px}
+  .toc{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M10 21a4 4 0 0 1 .6-7.95A6 6 0 0 1 22 14.5 3.3 3.3 0 0 1 21.5 21z" fill="var(--accent-ink)"/></svg>
+      Cumulo
+    </a>
+    <a class="back" href="#">Back to home</a>
+  </header>
+
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated October 21, 2026</p>
+
+  <div class="layout">
+    <nav class="toc" aria-label="On this page">
+      <ol>
+        <li><a href="#agreement">Agreement</a></li>
+        <li><a href="#account">Your account</a></li>
+        <li><a href="#content">Your content</a></li>
+        <li><a href="#use">Acceptable use</a></li>
+        <li><a href="#sharing">Sharing and collaboration</a></li>
+        <li><a href="#plans">Plans and billing</a></li>
+        <li><a href="#ip">Our service</a></li>
+        <li><a href="#termination">Ending your account</a></li>
+        <li><a href="#warranty">Warranties</a></li>
+        <li><a href="#liability">Limit of liability</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#law">Governing law</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <div class="summary">
+        <b>The short version</b>
+        <ul>
+          <li>Your files belong to you. We only handle them to run the service.</li>
+          <li>Keep your account secure and don’t use Cumulo for anything illegal or harmful.</li>
+          <li>You can cancel any time, and we’ll give you notice before we close an account.</li>
+        </ul>
+      </div>
+
+      <section id="agreement">
+        <h2>Agreement</h2>
+        <p>These Terms of Service (“Terms”) are a contract between you and Cumulo (“we”, “us”) covering your use of our website, apps and storage service (the “Service”). By creating an account or using the Service, you agree to these Terms and to our Privacy Policy. If you’re using Cumulo for an organization, you confirm you have authority to accept these Terms on its behalf. If you don’t agree, please don’t use the Service.</p>
+      </section>
+
+      <section id="account">
+        <h2>Your account</h2>
+        <ul class="pl">
+          <li>You must be at least 13 years old (or the minimum age in your country) to use Cumulo.</li>
+          <li>Give accurate information when you sign up and keep it up to date.</li>
+          <li>Keep your password and passkeys secure. You’re responsible for activity on your account, so tell us right away if you suspect unauthorized access.</li>
+          <li>Because files are end-to-end encrypted, we can’t recover them if you lose your sign-in credentials and recovery key.</li>
+        </ul>
+      </section>
+
+      <section id="content">
+        <h2>Your content</h2>
+        <p>You keep all rights to the files, folders and other material you upload (“Your Content”). We don’t claim ownership of it.</p>
+        <p>To run the Service, you give us a limited licence to store, copy, transmit and display Your Content only as needed to provide Cumulo to you and the people you choose to share with. This licence ends when you delete the content or close your account, apart from the short backup period described in the Privacy Policy.</p>
+        <p>You’re responsible for Your Content, and you confirm that you have the rights needed to upload it and share it.</p>
+      </section>
+
+      <section id="use">
+        <h2>Acceptable use</h2>
+        <p>Don’t use Cumulo to:</p>
+        <ul class="pl">
+          <li>store or share anything illegal, including content that exploits children, infringes someone’s copyright or incites violence;</li>
+          <li>distribute malware, phishing pages or other harmful code;</li>
+          <li>harass, threaten or defraud other people;</li>
+          <li>attempt to break, probe or overload the Service, or access accounts or data that aren’t yours;</li>
+          <li>resell the Service or use it as a public file-hosting or content delivery network, unless we’ve agreed in writing;</li>
+          <li>get around storage limits, rate limits or other technical restrictions.</li>
+        </ul>
+        <p>Because your files are encrypted, we don’t monitor their contents. We may act on reports, on public share links, and on activity that threatens the Service or other users.</p>
+      </section>
+
+      <section id="sharing">
+        <h2>Sharing and collaboration</h2>
+        <p>When you share a file or folder, anyone with access can view it, and editors can change it. Shared links work for whoever holds them unless you add a password or expiry date. You’re responsible for who you share with, and you can remove access at any time. Once someone has downloaded a file, we can’t take back their copy.</p>
+      </section>
+
+      <section id="plans">
+        <h2>Plans and billing</h2>
+        <div class="tbl"><table>
+          <thead><tr><th>Plan</th><th>Storage</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Free</td><td>15 GB</td><td>No charge</td></tr>
+            <tr><td>Plus</td><td>1 TB</td><td>Billed monthly or yearly</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="pl">
+          <li>Paid plans renew automatically at the end of each billing period until you cancel. You can cancel in Settings, and your plan runs until the end of the period you’ve paid for.</li>
+          <li>Prices exclude taxes where applicable. We’ll tell you at least 30 days before a price change applies to you.</li>
+          <li>Unless the law requires otherwise, payments are non-refundable, except within 14 days of your first purchase of a paid plan.</li>
+          <li>If you go over your storage limit, you can’t upload new files until you free up space or upgrade. We won’t delete files because you’re over the limit.</li>
+          <li>Free accounts that are inactive for 24 months may be closed after we give you 60 days’ notice by email.</li>
+        </ul>
+      </section>
+
+      <section id="ip">
+        <h2>Our service</h2>
+        <p>The Service, including its software, design, name and logos, belongs to Cumulo and our licensors. We give you a personal, non-transferable licence to use our apps for their intended purpose while you follow these Terms. You may not copy, modify, reverse engineer or build competing products from the Service, except where the law lets you. If you send us feedback or ideas, we may use them without owing you anything.</p>
+      </section>
+
+      <section id="termination">
+        <h2>Ending your account</h2>
+        <p>You can close your account at any time in Settings, and you can download your files first.</p>
+        <p>We may suspend or close your account if you seriously or repeatedly break these Terms, if you don’t pay for a paid plan, or if the law requires it. Unless there’s an urgent risk to people or the Service, we’ll give you notice and a chance to fix the problem and download your files first.</p>
+        <p>Sections that by their nature should continue after closure, such as those on ownership, warranties and liability, will continue to apply.</p>
+      </section>
+
+      <section id="warranty">
+        <h2>Warranties</h2>
+        <p class="caps">The Service is provided “as is” and “as available”. To the fullest extent the law allows, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose and non-infringement. We don’t promise that the Service will be uninterrupted, error-free or free of data loss, so please keep copies of important files.</p>
+        <p>Some places don’t allow these exclusions, so they may not apply to you. Your legal rights as a consumer are not affected.</p>
+      </section>
+
+      <section id="liability">
+        <h2>Limit of liability</h2>
+        <p class="caps">To the fullest extent the law allows, Cumulo and its team won’t be liable for indirect, incidental, special or consequential losses, or for lost profits, revenue or data. Our total liability for any claim relating to the Service is limited to the greater of the amount you paid us in the 12 months before the claim or CAD $100.</p>
+        <p>Nothing in these Terms limits liability that can’t be limited by law, such as liability for fraud or for death or personal injury caused by negligence.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes</h2>
+        <p>We may update these Terms as the Service changes. For important changes we’ll email you or show a notice in the app at least 30 days before they take effect. If you keep using Cumulo after that date, you accept the updated Terms. If you don’t agree, you can close your account.</p>
+      </section>
+
+      <section id="law">
+        <h2>Governing law</h2>
+        <p>These Terms are governed by the laws of Ontario, Canada, and the federal laws of Canada that apply there. Courts in Toronto, Ontario will handle any dispute, except where your local consumer law gives you the right to go to court where you live.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact us</h2>
+        <p>Questions about these Terms? Email <a href="mailto:legal@cumulo.example">legal@cumulo.example</a> or write to Cumulo Inc., 123 Example Street, Toronto, ON.</p>
+      </section>
+
+      <p class="note">This is a sample for a demo product. Replace the company details, plans, prices and jurisdiction with your own, and have a qualified lawyer review it before you publish it.</p>
+    </article>
+  </div>
+</div>
+<footer><div class="wrap">© 2026 Cumulo</div></footer>
+
+<script>
+(function(){
+  try{
+    var links=[].slice.call(document.querySelectorAll('.toc a'));
+    var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+    function spy(){
+      var y=window.scrollY+120, cur=0;
+      secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+      links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+    }
+    window.addEventListener('scroll',spy,{passive:true});spy();
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
