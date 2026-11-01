@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Blinds Privacy</title>
+<style>
+:root{
+  --bg:#eef1f6; --panel:#ffffff; --ink:#1b2333; --muted:#5d687d; --line:#dde2ec; --accent:#2f4bff;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142; --accent:#7d8dff; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10141d; --panel:#181d29; --ink:#e8ecf5; --muted:#9aa4ba; --line:#2a3142; --accent:#7d8dff; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 64px}
+h1{font-size:clamp(30px,6vw,42px);letter-spacing:-.02em;line-height:1.1;margin:40px 0 8px}
+.updated{color:var(--muted);margin:0 0 28px}
+.summary{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:8px}
+.summary ul{margin:0;padding-left:20px}
+h2{font-size:22px;margin:32px 0 8px}
+p,ul{margin:0 0 14px}
+li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Home Blinds privacy</h1>
+  <p class="updated">Last updated 1 November 2026</p>
+
+  <div class="summary">
+    <ul>
+      <li>Home Blinds is a private Alexa skill. It is not published, and only its owner's household can use it.</li>
+      <li>It reads one thing from Amazon: your Amazon user ID, to check that a request comes from the owner's account.</li>
+      <li>Nothing is sold, shared or used for ads.</li>
+    </ul>
+  </div>
+
+  <h2>What the skill does</h2>
+  <p>Home Blinds lets Alexa open, close and set the position of window blinds in one home. Alexa sends each command to a small function, which passes it to that home's own home automation system.</p>
+
+  <h2>Information used</h2>
+  <ul>
+    <li><b>Amazon user ID</b>, through Login with Amazon when you link the skill. The skill uses it to accept the owner's account and refuse any other.</li>
+    <li><b>The command itself</b>: which blind, and open, close or a position. It is used only to move the blind.</li>
+  </ul>
+  <p>The skill does not ask for your name, email address, voice recordings, location or contacts. Voice recordings stay with Amazon under <a href="https://www.amazon.com/alexaprivacy">Amazon's Alexa privacy settings</a>.</p>
+
+  <h2>What is kept</h2>
+  <p>The skill has no database. Its function writes short technical logs (errors, and the Amazon user ID of a refused request), which are deleted after 30 days.</p>
+
+  <h2>Sharing</h2>
+  <p>Information is not sold or shared with anyone. It passes only between Amazon, the skill's function, and the home's own system.</p>
+
+  <h2>Stopping</h2>
+  <p>Disable the skill in the Alexa app (Skills &amp; Games, then Your Skills) to unlink it. The skill then receives nothing from your account.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the date at the top changes with it.</p>
+</main>
+</body>
+</html>
